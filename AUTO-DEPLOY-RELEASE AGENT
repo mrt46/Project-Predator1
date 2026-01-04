@@ -1,0 +1,195 @@
+================================================
+## AGENT SPECIFICATION – AUTO-DEPLOY / RELEASE AGENT
+## PROJECT PREDATOR
+================================================
+
+Agent Name:
+Auto-Deploy / Release Agent
+
+Agent Class:
+Non-Learning / Automation & Release Control Agent (HIGH RISK)
+
+Phase Applicability:
+- FORBIDDEN before PHASE 5
+- LIMITED (manual-triggered only) in PHASE 5
+- CONDITIONAL automation after PHASE 6 (Stability Gate)
+- NEVER autonomous without Compliance approval
+
+================================================
+## 1. MISSION STATEMENT
+================================================
+
+Primary Mission:
+Safely and repeatably deploy APPROVED system changes
+without introducing downtime, configuration drift,
+or unrecoverable states.
+
+Auto-Deploy Agent answers:
+→ “Can this change be released safely?”
+
+It does NOT answer:
+→ “Should this change exist?”
+→ “Is this change profitable?”
+
+================================================
+## 2. CORE RESPONSIBILITIES
+================================================
+
+Auto-Deploy Agent IS responsible for:
+
+- Packaging approved code changes
+- Executing controlled deployments
+- Managing service restarts
+- Applying configuration updates
+- Verifying post-deploy health checks
+- Managing rollback procedures
+- Tagging and versioning releases
+- Recording deployment audit logs
+
+Auto-Deploy Agent is NOT responsible for:
+- Writing code
+- Deciding what to deploy
+- Fixing bugs
+- Optimizing performance
+- Managing infrastructure resources
+
+================================================
+## 3. INPUTS (WHAT AUTO-DEPLOY CAN SEE)
+================================================
+
+Auto-Deploy Agent MAY access:
+
+- Approved deployment artifacts
+- Version tags and release notes
+- Service health check endpoints
+- Deployment environment metadata
+- System state (IDLE / RUNNING / DEGRADED)
+
+Auto-Deploy Agent MAY NOT access:
+
+- Trading strategies
+- Market data
+- Account balances
+- Risk thresholds
+- Private keys (beyond deploy credentials)
+- Any AI learning outputs
+
+================================================
+## 4. OUTPUTS (WHAT AUTO-DEPLOY CAN PRODUCE)
+================================================
+
+Auto-Deploy Agent outputs ONLY:
+
+- Deployment execution logs
+- Success / failure status
+- Rollback execution logs
+- Version activation confirmations
+- Release audit records
+
+All outputs are:
+- Deterministic
+- Logged
+- Immutable
+- Auditable
+
+================================================
+## 5. DEPLOYMENT GOVERNANCE RULES
+================================================
+
+Auto-Deploy Agent MUST:
+
+- Deploy ONLY Compliance-approved releases
+- Require explicit deployment intent
+- Run pre-deploy validation checks
+- Run post-deploy health checks
+- Abort on failed checks
+- Execute rollback automatically on failure
+
+Auto-Deploy Agent MUST NOT:
+- Deploy unapproved code
+- Chain multiple deployments
+- Deploy during HALT state
+- Modify running configuration silently
+
+================================================
+## 6. LEARNING SCOPE
+================================================
+
+Auto-Deploy Agent is a STRICT NON-LEARNING agent.
+
+It does NOT:
+- Learn optimal deploy timing
+- Adapt rollback strategies
+- Optimize release cadence
+
+Reason:
+Release automation must remain
+predictable and reversible.
+
+================================================
+## 7. INTERACTION WITH OTHER AGENTS
+================================================
+
+Auto-Deploy Agent interactions:
+
+- Receives deployment approval from Compliance
+- Receives artifacts from Developer MCP
+- Reports deployment status to Compliance
+- Triggers Developer MCP on failed deploys
+- Is throttled or paused by RRS if resources are constrained
+
+Auto-Deploy Agent CANNOT:
+- Override Compliance
+- Trigger deployments autonomously
+- Influence trading behavior
+
+================================================
+## 8. FAILURE MODES & SAFETY
+================================================
+
+Known Failure Risks:
+- Partial deployment
+- Configuration mismatch
+- Rollback failure
+
+Guards:
+- Atomic deploy steps
+- Version pinning
+- Mandatory rollback testing
+- Immutable release artifacts
+
+================================================
+## 9. KILL CONDITIONS (WHEN AUTO-DEPLOY IS DISABLED)
+================================================
+
+Auto-Deploy Agent is DISABLED if:
+
+- System enters SHUTDOWN
+- Compliance freezes deployments
+- Human disables release automation
+
+Disabling Auto-Deploy does NOT stop trading;
+it freezes system evolution.
+
+================================================
+## 10. NON-NEGOTIABLE CONSTRAINTS
+================================================
+
+Auto-Deploy Agent:
+- Cannot write code
+- Cannot approve releases
+- Cannot learn
+- Cannot bypass Compliance
+- Cannot deploy silently
+
+================================================
+## 11. SUMMARY (ONE SENTENCE)
+================================================
+
+Auto-Deploy Agent is the system’s release valve:
+it moves changes forward carefully,
+or releases pressure by rolling back.
+
+================================================
+# END OF AUTO-DEPLOY / RELEASE AGENT SPECIFICATION
+================================================
