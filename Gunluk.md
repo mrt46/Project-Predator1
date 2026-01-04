@@ -925,3 +925,206 @@ Signed:
 - CIO
 - AI (System Architect)
 ================================================
+
+================================================
+# PROJECT PREDATOR – SYSTEM JOURNAL
+# SINGLE SOURCE OF TRUTH
+================================================
+
+This journal is an append-only operational memory.
+No hindsight edits.
+No retroactive corrections.
+Only what was decided and understood at the time.
+
+================================================
+## JOURNAL ENTRY 001
+================================================
+
+Date: YYYY-MM-DD  
+Phase: FAZ 1 – Foundation & Scaffolding  
+Authoritative Role: AI System Architect & Agent Governance Specialist  
+
+Title:
+Baseline Strategy Initialization Decision
+
+------------------------------------------------
+### CONTEXT
+------------------------------------------------
+
+At this stage of the project, the system architecture,
+agent roles, governance model, and data flow
+have been fully defined.
+
+A critical design question was raised:
+
+> “When the system is first deployed,
+> which strategies will the Strategist MCP start with?”
+
+This question directly impacts:
+- System stability
+- Risk exposure
+- Learning integrity
+- Phase discipline
+
+------------------------------------------------
+### DECISION (FINAL)
+------------------------------------------------
+
+The system will NOT start with:
+- Internet-sourced strategies
+- TradingView-copied strategies
+- AI-generated complex strategies
+- Optimized or high-parameter strategies
+
+Instead, the system will start with a SMALL SET
+of SIMPLE, EXPLAINABLE, REGIME-SPECIFIC
+**BASELINE STRATEGIES**.
+
+These strategies are NOT intended to maximize profit.
+They are intended to validate system behavior.
+
+------------------------------------------------
+### RATIONALE
+------------------------------------------------
+
+1. Early optimization without ground truth leads to overfitting.
+2. Internet strategies are biased, overfit, and non-auditable.
+3. Complex strategies hide system-level bugs.
+4. Baseline strategies provide behavioral clarity.
+5. Phase discipline forbids premature alpha chasing.
+
+The system must first prove that:
+- Orders are placed correctly
+- Risk limits are enforced
+- Kill-switches work
+- Drawdowns behave as expected
+- Logs and metrics are trustworthy
+
+------------------------------------------------
+### INITIAL BASELINE STRATEGY SET
+------------------------------------------------
+
+#### STRATEGY A – SIMPLE TREND FOLLOWING
+
+Purpose:
+- Validate trend behavior
+- Test trailing stops
+- Observe drawdown during regime shifts
+
+Structure:
+- Slow trend filter (long-term MA family)
+- Simple momentum-based entry
+- ATR-based stop-loss
+- Trailing exit
+
+Expected Behavior:
+- Performs in trending markets
+- Suffers in range-bound markets
+- Clear failure modes
+
+------------------------------------------------
+
+#### STRATEGY B – RANGE / MEAN REVERSION
+
+Purpose:
+- Validate non-trend behavior
+- Prevent overtrading during consolidation
+
+Structure:
+- Range detection (low volatility conditions)
+- Overbought / oversold entry
+- Mean reversion exit
+
+Expected Behavior:
+- Performs in sideways markets
+- Fails during strong breakouts
+
+------------------------------------------------
+
+#### STRATEGY C – VOLATILITY BREAKOUT (CONTROLLED)
+
+Purpose:
+- Test system reaction during sudden market moves
+- Stress-test risk and kill-switch logic
+
+Structure:
+- Volatility compression detection
+- Breakout entry with confirmation
+- Tight trailing or time-based exit
+
+Expected Behavior:
+- Few but sharp trades
+- High variance
+- Most dangerous baseline strategy
+
+------------------------------------------------
+
+#### STRATEGY D – TIME-BASED EXIT (OPTIONAL)
+
+Purpose:
+- Isolate exit logic from price-based decisions
+- Compare against stop-based exits
+
+Structure:
+- Simple entry condition
+- Fixed candle-count exit
+
+Expected Behavior:
+- Predictable behavior
+- Useful for KPI comparison
+
+------------------------------------------------
+### STRATEGIST MCP OPERATING MODE (INITIAL)
+------------------------------------------------
+
+For the initial operational period:
+
+Strategist MCP:
+- WILL run only the baseline strategies
+- WILL observe performance and behavior
+- WILL log regime-specific outcomes
+- WILL NOT generate new strategies
+- WILL NOT optimize parameters
+- WILL NOT search for alpha
+
+This phase is classified as:
+CALIBRATION, NOT LEARNING.
+
+------------------------------------------------
+### PHASE TRANSITION CONDITION
+------------------------------------------------
+
+Only after the following are true may the system proceed
+to strategy generation and experimentation:
+
+- Paper trading is stable
+- Drawdowns are understood
+- Risk controls behave deterministically
+- Metrics are consistent
+- No unexplained system behavior exists
+
+This corresponds to:
+FAZ 6 – Strategy Intensification
+
+------------------------------------------------
+### GOVERNANCE NOTE
+------------------------------------------------
+
+These baseline strategies exist to protect the system
+from false confidence.
+
+Profit is not the goal at this stage.
+Survivability, observability, and control are.
+
+------------------------------------------------
+### ONE-SENTENCE SUMMARY
+------------------------------------------------
+
+The system begins not with ambition,
+but with discipline:
+simple strategies to prove correctness
+before intelligence is allowed to grow.
+
+================================================
+# END OF JOURNAL ENTRY 001
+================================================
